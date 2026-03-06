@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Gift 08-03</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="bg"></div>
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <main class="screen screen--active" id="screen-login">
+    <div class="container">
+      <div class="card">
+        <div class="card__left">
+          <div class="photoFrame">
+            <img src="./assets/cover.jpg" alt="Cover" onerror="this.src='./assets/cover.svg'">
+          </div>
+        </div>
+
+        <div class="card__right">
+          <div class="lock">
+            <div class="lock__heart">❤</div>
+            <div class="lock__dots" id="dots">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="keypad" id="keypad" aria-label="Keypad"></div>
+          <div class="msg" id="loginMsg" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <main class="screen" id="screen-menu">
+    <div class="container">
+      <div class="menuGrid">
+        <!-- Làm giống code mẫu của bạn: icon nằm trong style/img/asset -->
+        <button class="menu-item" id="btn-image" type="button">
+          <span class="icon"><img src="style/img/asset/Image.png" alt="Image"></span>
+          <span>Image</span>
+        </button>
+
+        <button class="menu-item" id="btn-letter" type="button">
+          <span class="icon"><img src="style/img/asset/Letter.png" alt="Letter"></span>
+          <span>Letter</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__bg" data-close="1"></div>
+    <div class="modal__panel" role="dialog" aria-modal="true">
+      <button class="modal__close" data-close="1" aria-label="Đóng">×</button>
+      <div class="modal__content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
